@@ -1,13 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import './css/home.css';
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    @apply bg-white text-black;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+header.header {
+    @apply w-full shadow-lg drop-shadow-md mx-auto;
+    background-color: rgb(24, 26, 30);
+}
+
+.navbar {
+    @apply flex justify-between items-center w-full mx-auto p-4 text-white ;
+    background-color: rgb(24, 26, 30);
+    max-width: 1150px;
+}
+
+.navbar-left {
+    @apply flex items-center justify-around w-1/2;
+}
+
+.logo {
+    @apply flex items-center justify-center h-16 hover:scale-110 hover:animate-pulse transition duration-1000;
+}
+
+.play-for-free {
+    @apply bg-green-400 hover:bg-green-500 h-full px-4 py-2 rounded-md text-white shadow-2xl shadow-green-800 cursor-pointer;
+}
+
+.navbar-right {
+    @apply flex items-center justify-around w-1/4;
+}
+
+select.language-picker {
+    @apply flex items-center justify-center bg-black text-white border-white;
+    background-color: rgb(24, 26, 30);
+    border-color: white;
+    outline-color: white;
+}
+
+
+.navbar-route {
+    @apply border-b-2 border-transparent hover:border-white transition duration-500;
 }
